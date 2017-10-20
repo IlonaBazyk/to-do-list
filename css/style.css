@@ -1,0 +1,264 @@
+@font-face{
+font-family: 'Verdana';
+src: url('../fonts/Verdana.ttf');
+}
+@font-face{
+font-family: 'Lucida Grande';
+src: url('../fonts/LucidaGrande.ttf');
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.wr {
+	margin: 0 auto;
+	width: 600px;
+	min-height: 500px;
+	max-width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #929292;
+	background: url(../images/bg.png);
+}
+
+.todo-list {
+	margin: 10% auto;
+	width: 300px;
+	max-width: 90%;
+	min-height: 250px;
+	background: url(../images/main-bg.png) no-repeat center bottom;
+	background-size: 100% 100%;
+	padding-bottom: 30px;
+}
+
+.top {
+	position: relative;
+	height: 36px;
+	border-radius: 4px;
+	background: url(../images/top-bg.png) no-repeat 50% 50%;
+	background-size: cover;
+	margin-bottom: 3px;
+}
+
+.add {
+	display: flex;
+	position: absolute;
+	left: 8px;
+	width: 29px;
+	height: 22px;
+	cursor: pointer;
+	border: 1px solid #6b3307;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+	margin-top: 4px;
+}
+
+.add i {
+	color: #e6bd7a;
+	margin: auto;
+	font-size: 15px;
+}
+
+.title {
+	display: inline-block;
+	position: absolute;
+	left: 114px;
+	top: 8px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.48);
+	color: #e1b771;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.filters{ 
+	display: inline-block;
+	position: absolute;
+	right: 8px;
+	width: 29px;
+	height: 22px;
+	cursor: pointer;
+	border: 1px solid #6b3307;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+	margin-top: 4px;
+	background: url(../images/icon-filters.png) no-repeat center center;
+}
+
+.filter-selection {
+	border:1px solid #c1c4c9; 
+	width: 136px;
+	height: 30px;
+	display: none;
+	position: absolute;
+	padding:  4px 5px 5px;
+	top: 29px;
+	right: 8px;
+	border-radius: 3px;
+	background: url(../images/main-bg.png) 50% 50%;
+	z-index: 5;
+	box-sizing: border-box;
+}
+
+.filter-selection .icon-priority {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin: auto;
+	cursor:pointer;
+	margin-right: 10px;
+}
+
+.icon-priority:nth-child(1){
+	background: url(../images/high.png) center center;
+	background-size: cover;
+}
+
+.icon-priority:nth-child(2){
+	background: url(../images/middle.png) center center;
+	background-size: cover;
+}
+
+.icon-priority:nth-child(3){
+	background: url(../images/low.png) center center;
+	background-size: cover;
+}
+
+.icon-priority:nth-child(4){
+	margin-right: 0;
+	position: relative;
+	top: -3px;
+}
+
+i.fa-calendar {
+	color: #817d7c;
+	font-size: 20px;
+}
+
+.task {
+	border-top: 1px solid #c1c4c9;
+	min-height: 34px;
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.checkbox {
+	opacity: 0.37;
+	border: 1px solid #818181;
+	border-radius: 2px;
+	width: 18px;
+	height: 15px;
+	margin-left: 14px;
+	cursor: pointer;
+}
+
+.task span {
+	display: inline-block;
+	margin: auto;
+	color: #413a36;
+	font-family: LucidaGrande;
+	font-size: 11px;
+	font-weight: 700;
+	margin-left: 30px; 
+}
+
+.input {
+	display: none;
+	background: #e8e8e8;
+	border-right: 1px solid #929292;
+	border-left: 1px solid #929292;
+	margin-top: -5px;
+	padding-top: 7px;
+}
+
+input[type=text] {
+	position: relative;
+	top: -6px;
+	border-radius: 3px;
+	margin: 0 5px 0px 45px;
+	padding: 5px 10px;
+	border: 1px solid #929292;
+}
+
+input[type=submit] {
+	background: url(../images/icon-add-grey.png) no-repeat center center;
+	border: 1px solid #929292;
+	border-radius: 3px;
+	width: 29px;
+	height: 26px;
+}
+
+input[type=radio] {
+	margin: 10px 20px 10px 20px;
+}
+.icon.icon-priority-high {
+	margin-left: 65px;
+}
+.task.done {
+	background: url(../images/checked.png) no-repeat 16px 5px;
+}
+
+.task.done span {
+	color: #b7b5b3;
+	text-decoration: line-through;
+}
+
+.task .close {
+	display: none ;
+	color: #5e5852;
+	position:relative;
+	top:-11px;
+	right: 2px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.done .close {
+	display: inline;
+}
+
+.icon {
+	white-space: nowrap; 
+}
+.icon:before {
+	content: '';
+	margin: 0 3px;
+	left: 15px;
+	top: -6px; 
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+.icon-priority-high:before {
+	background: url(../images/high.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.icon-priority-middle:before {
+	background: url(../images/middle.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+.icon-priority-low:before {
+	background: url(../images/low.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+i.icon {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+}
+
+.done i.icon {
+	opacity: 0.5;
+}
