@@ -1,6 +1,6 @@
 // показываем поле ввода заметок 
 $('.add').click(function(){
-  $('.input').toggle()
+  $('.input').slideToggle()
   $('input[type=text]').trigger('focus')
   $(this).find('i').toggleClass('fa-plus fa-times')
 })
