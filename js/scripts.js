@@ -9,7 +9,6 @@ $('.add').click(function(){
 $('input[type=submit]').click(function(){
   if ($('input[type=text]').val()!==""){
     $('.input').after('<div class="task"><div class="checkbox"></div><span>' + $('input[type=text]').val() + '</span><i class="fa fa-times close" aria-hidden="true"></i><i class="' + $('input[type=radio]:checked').attr('class') + '"><i/></div>')
-    // $('.input').toggle()
     $('input[type=text]').val('')    
   }
 })
